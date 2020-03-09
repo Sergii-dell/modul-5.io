@@ -1,0 +1,442 @@
+
+.page-header{
+  width: 1600px;              /* ширина  контейнера */
+  margin: 0 auto;           /* по  вертикали  ноль  по  ширине  авто  */
+}
+
+.container{
+  width: 1110px;              /* ширина  контейнера */
+  margin: 0 auto;           /* по  вертикали  ноль  по  ширине  авто  */
+}
+
+.clearfix::after{        /*  очищяем  чтобы флоаты чуствовали  друг  друга */
+  display: table;               /*   указываем  елемент  таблицей  для  оптикания текста  */
+  content: "";                  /*     создайом  пустой контент  */
+  clear: both;                  /*    отменяет  оптикание  елемента  с  права и слева */
+} 
+
+.page-header{                   /*  задайом  контенеру  с  навигацией  верхний и  нижний  отступ */
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+
+h1{
+  margin: 0;
+  padding: 0;
+
+  display: inline-block;                /*  задайом  елементу  блочное  свойство  */
+  font-family: 'Roboto', sans-serif;      /* подключаем  шрифт  */
+  font-weight: 300;            /* жирность  */
+  line-height: 32px;          /*  размер  строковой  линии  */
+  font-size: 30px;            /*  размер  шрифта  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  color: #555252;            /*  цвет  текста  */
+  text-align: left;      /* размещяем   текст */
+}
+
+h1:first-letter{        /*  пременяем  к  первой  букве  */                         
+  font-weight: 900;            /* жирность  */
+  color: #1abc9c;               /* задайом цвет заливки контента */
+}
+
+.site-navigation{
+  float: right;         /*   список  перемещяем  в  право  */
+  list-style: none;     /*  убераем  оформление  списка  ( точки )  */
+}
+
+.site-navigation li{
+  float: left;                 /*  лишки  прижимаем  в  лево  */
+}
+
+.site-navigation li:not(:last-child){
+  margin-right: 32px;                     /*  задайом  правый  марджын  лишке  */
+}
+
+.site-navigation a{                               /*  применяем  параметр  к  тегу  а  */
+  font-family: 'Open Sans', sans-serif;             /* подключаем  шрифт  */
+  font-weight: 700;            /* жирность  */
+  display: block;                /*  задайом  елементу  блочное  свойство  */
+  color: #0f0101;           /*  цвет  текста  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  text-decoration: none ;        /*  убераем  подчеркивание  */
+  font-size: 14px;            /*  размер  шрифта  */
+  margin-top: 9px;                /*  задайом  верхний  марджин  для  центрирования  */
+}
+.site-navigation a:hover,      /*  задайом  цвет  при  наведении  на  сылку  */
+.site-navigation a:focus{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  color: #1abc9c;            /*  цвет  текста  */
+}
+
+
+.slider-ctrl{                        /*  оформление  кнопки  и  ийо  центрирование  по  высоте  */
+  position: absolute;
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  border: none;
+  background-color: #55a290;
+  top:227px;
+  z-index: 1;
+}
+
+.slider-ctrl-prev{              /*  размещяем  в  право  и  влево  кнопки  */
+  left: 244px;
+  background-image: url("../img/3.png");
+  background-repeat: no-repeat;
+  background-position: center;                        /* расположение  по  центру  фото  */
+  
+}
+
+.slider-ctrl-next{              /*  размещяем  в  право  и  влево  кнопки  */
+  right: 244px;
+  background-image: url("../img/2.png");
+  background-repeat: no-repeat;
+  background-position: center;                        /* расположение  по  центру  фото  */
+}
+
+.slides{            /*  применяем  к  списку  параметры  */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slides-item{                /*   применяем  параметр  к  лишкам  */
+  position: relative;
+}
+
+.banner{                                            /*  размещяем  банер  */
+  width: 1600px;
+  height: 602px;
+  background-image: url("../img/1.jpg");
+  background-size: cover;                              /* вмещяем  картинку  в  заданые  размеры  */
+  background-repeat: no-repeat;
+  margin: 0 auto;           /* по  вертикали  ноль  по  ширине  авто  */
+}
+
+
+.slides-h{                   /*  применяем  параметры  к  тегу  п  */
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  font-family: 'Roboto', sans-serif;      /* подключаем  шрифт  */
+  font-weight: 900;            /* жирность  */
+  line-height: 82px;          /*  размер  строковой  линии  */
+  font-size: 60px;            /*  размер  шрифта  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  color: #ffffff;            /*  цвет  текста  */
+ 
+  top: 199px;
+  left: 430px;
+ 
+ 
+}
+
+.slides-descr{                /*  применяем  параметры  к  тегу  п  */
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  font-family: 'Roboto', sans-serif;      /* подключаем  шрифт  */
+  font-weight: 300;            /* жирность  */
+  line-height: 54px;          /*  размер  строковой  линии  */
+  font-size: 24px;            /*  размер  шрифта  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  color: #ffffff;            /*  цвет  текста  */
+
+  top: 285px;
+  left: 430px;
+}
+
+
+
+.featured-products{
+  width: 1600px;
+  margin: 0 auto;           /* по  вертикали  ноль  по  ширине  авто  */
+  background-color: #e9f0fd;
+  padding-bottom: 100px;                      /* указываем  нижний  размер  марджина  */
+}
+
+.hh{
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;              /* жирность  шрифта  */
+
+  line-height: 112px;          /*  размер  строковой  линии  */
+  font-size: 48px;            /*  размер  шрифта  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  color: #515151;            /*  цвет  текста  */
+  text-align: center;      /* размещяем  по  центру  текст */
+  padding-top: 68px;
+  margin-bottom: 80px;
+}
+.hh::after{                                 /*  делаем  рисочку под h2   before */
+  content: '';                             /*  создайом  пустой контент  */
+  display: block;                            /* делаем  елемент  блочным */
+  padding: 0;
+  margin: 0;
+  width: 165px;                            /*  задайом  ширину */
+  height: 7px;                              /*  задайом  высоту  */
+  background-color: #1abc9c;               /* задайом цвет заливки контента */
+  margin: 0  auto;                           /*  устанавливаем  блок  по  центру  ширины  */
+}
+
+
+
+.featured-products-list{            /*  здвигае  весь  блок  списка  вниз  */
+  list-style: none;                        /*  убераем  оформление  списка  ( точки )  */
+  padding: 0;
+}
+
+.img-nazva{
+ margin: 0;
+ padding: 0;
+
+ display: block;                              /* делаем  елемент  блочным */
+ position: absolute;
+ border: none;
+ bottom: 0;
+ left: 0;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 900;              /* жирность  шрифта  */
+ font-size: 18px;            /*  размер  шрифта  */
+ line-height: 40px;                        /*  размер  строковой  линии  */
+ text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+ color: #ffffff;            /*  цвет  текста  */
+ text-align: left;      /* размещяем  по  центру  текст */
+ width: 188px;                 /* ширина  контейнера  */
+ height: 40px;                 /* высота  контейнера  */  
+ padding-left: 14px; 
+ background-color: #323232;    /*  задайом  цвет  фона  */
+}
+
+.img-dolor{
+ margin: 0;
+ padding: 0;
+
+ display: block;                              /* делаем  елемент  блочным */
+ position: absolute;
+ border: none;
+ bottom: 0;
+ left: 202px;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 900;              /* жирность  шрифта  */
+ line-height: 40px;                        /*  размер  строковой  линии  */
+ font-size: 18px;            /*  размер  шрифта  */
+ text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+ color: #ffffff;            /*  цвет  текста  */
+ text-align: center;      /* размещяем  по  центру  текст */
+
+ width: 53px;                 /* ширина  контейнера  */
+ height: 40px;                 /* высота  контейнера  */  
+
+ background-color: #8c8c8c;    /*  задайом  цвет  фона  */
+}
+
+
+
+img{
+  border: none;
+}
+
+
+
+.products-list-item{
+  position: relative;
+
+  float: left;                             /* к ли  пременяем  флоат */
+  width: 255px;                            /*  задайом  ширину */
+  height: 322px;                              /*  задайом  высоту  */
+  margin-right: 30px;                       /* задайом  правый  отступ  */
+  margin-bottom: 30px;                       /* задайом  нижний  отступ */
+  background-color: #e9f0fd;    /*  задайом  цвет  фона  */
+} 
+
+.zproducts-list-item{
+  position: absolute;
+  width: 255px;
+  height: 40px;
+  bottom: 0;
+  left: 0;
+  border: none;
+}
+
+.products-list-item:hover .img-nazva ,      /*  задайом  цвет  при  наведении  на  сылку  */
+.products-list-item:focus .img-nazva{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+ background-color: #1abc9c;
+}
+.products-list-item:hover .img-dolor ,      /*  задайом  цвет  при  наведении  на  сылку  */
+.products-list-item:focus .img-dolor{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+ background-color: #7fd9c7;
+}
+
+
+
+.products-list-item:nth-child(4n){           /* 4  в  колекции  */
+  margin-right: 0;                              /*  обнуляем  левый  марджин  */
+}
+   
+.products-list-item:nth-last-child(-n+4){       /* 4  в  колекции  */
+  margin-bottom: 0;                             /*  обнуляем  нижний  марджин  */
+}
+
+
+
+
+
+.footeres{
+  width: 1600px;
+  margin: 0 auto;           /* по  вертикали  ноль  по  ширине  авто  */
+  background-color: #323232;
+  height: 89px;
+}
+.location{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;         /* подключаем  шрифт  */
+  font-weight: 400;            /* жирность  */
+  line-height: 28px;          /*  размер  строковой  линии  */
+  font-size: 16px;            /*  размер  шрифта  */
+  color: #ffffff;            /*  цвет  текста  */
+  text-align: center;
+  padding-top: 30px;
+}
+.location a{
+  text-decoration: none ;        /*  убераем  подчеркивание  */
+  color: #ffffff; 
+}
+.location a:hover,      /*  задайом  цвет  при  наведении  на  сылку  */
+.location a:focus{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+ color: #46bfa9;
+}
+
+.opasetii{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 233px;
+  height: 260px;
+  background: rgba(0, 0, 0, 0.55);   /*  задайом  фон  сразу  с  полупрозрачностю  */
+  bottom: 51px;
+  left: 11px;
+ 
+  opacity: 0;
+  z-index: 1;
+}
+
+.products-list-item:hover .opasetii,      /*  задайом  цвет  при  наведении  на  сылку  */
+.products-list-item:focus .opasetii{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  opacity: 1.0;
+}
+
+
+
+
+.opasetii-a{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  background: none;                                    /*  убераем  фон  кнопки  */
+  background-image: url(../img/8.png);
+  background-repeat: no-repeat;
+  background-position: center;                        /* расположение  по  центру  фото  */
+
+  top: 79px;
+  left: 35px;
+  z-index: 2;
+}
+.opasetii-a:hover,      /*  задайом  цвет  при  наведении  на  сылку  */
+.opasetii-a:focus {      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+.opasetii-b:hover,      /*  задайом  цвет  при  наведении  на  сылку  */
+.opasetii-b:focus {      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+.opasetii-c:hover,      /*  задайом  цвет  при  наведении  на  сылку  */
+.opasetii-c:focus {      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+.opasetii-d:hover,      /*  задайом  цвет  при  наведении  на  сылку  */
+.opasetii-d:focus {      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  background-color: #323232;
+
+}
+
+
+
+
+.opasetii-b{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;                                    /*  убераем  фон  кнопки  */
+  background-image: url(../img/9.png);
+  background-repeat: no-repeat;
+  background-position: center;                        /* расположение  по  центру  фото  */
+  border: 1px solid #ffffff;
+  top: 79px;
+  left: 94px;
+  z-index: 2;
+}
+
+
+.opasetii-c{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;                                    /*  убераем  фон  кнопки  */
+  background-image: url(../img/10.png);
+  background-repeat: no-repeat;
+  background-position: center;                        /* расположение  по  центру  фото  */
+  border: 1px solid #ffffff;
+  top: 79px;
+  left: 151px;
+  z-index: 2;
+}
+
+.opasetii-d{
+  position: absolute;
+  width: 166px;
+  height: 50px;
+  background: none;                                    /*  убераем  фон  кнопки  */
+  border: 1px solid #ffffff;
+  top: 136px;
+  left: 35px;
+  z-index: 2;
+}
+
+.opasetii-d-img{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 28px;
+  background-image: url(../img/11.png);
+  background-repeat: no-repeat;
+  top:11px;
+  left: 12px;
+  z-index: 3;
+}
+
+.opasetii-d-text{
+  position: absolute; 
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;         /* подключаем  шрифт  */
+  font-weight: 400;            /* жирность  */
+  line-height: 32px;          /*  размер  строковой  линии  */
+  font-size: 14px;            /*  размер  шрифта  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  color: #ffffff;            /*  цвет  текста  */
+  top: 8px;
+  left: 60px;
+  z-index: 3;
+}
